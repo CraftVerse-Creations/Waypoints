@@ -3,7 +3,7 @@
 class Waypoints {
     private static waypointsMap: java.util.HashMap<string, IWaypoints> = new java.util.HashMap()
 
-    static add(name: string, color: string): void {
+    public static add(name: string, color: string): void {
         const playerPosition = Player.getPosition()
 
         if(this.get(name)) return
@@ -19,13 +19,13 @@ class Waypoints {
         })
     }
 
-    static get(name: string): IWaypoints {
+    public static get(name: string): IWaypoints {
         if(!this.waypointsMap.get(name)) return
 
         return this.waypointsMap.get(name)
     }
 
-    static update(name: string, newName: string, params: IWaypoints): void {
+    public static update(name: string, newName: string, params: IWaypoints): void {
         switch(newName) {
             case name: 
             this.waypointsMap.replace(newName, params)
@@ -37,21 +37,21 @@ class Waypoints {
         }
     }
 
-    static remove(name: string): void { 
+    public static remove(name: string): void { 
         this.waypointsMap.remove(name) 
     }
 
-    static getMap(): java.util.HashMap<string, IWaypoints> {
+    public static getMap(): java.util.HashMap<string, IWaypoints> {
         return this.waypointsMap
     }
     
-    static setMap(scope): void {
+    public static setMap(scope): void {
         for(let key in scope) {
             this.waypointsMap.put(key, scope[key])
         }
     }
 
-    static teleport(name: string) {
+    public static teleport(name: string) {
         const waypoint: IWaypoints = this.waypointsMap.get(name)
 
         if(!waypoint) return
