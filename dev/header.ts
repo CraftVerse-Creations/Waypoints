@@ -1,0 +1,1 @@
+const Color = android.graphics.Color;

@@ -1,0 +1,6 @@
+header.ts
+translation.ts
+utils.ts
+
+core/main.ts
+core/Gui.ts
