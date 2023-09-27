@@ -1,4 +1,5 @@
 output
 tsconfig.json
+dev/tsconfig.json
 *.log
 *.icmod
