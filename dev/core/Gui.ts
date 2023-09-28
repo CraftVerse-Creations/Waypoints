@@ -215,13 +215,13 @@ class WaypointsUI {
       }},
       updateCoordsButton: { type: "button", bitmap: "button_borderless_light", bitmap2: "button_borderless_lightpressed", scale: 14, x: 80, y: this.offset + 330, clicker: {
         onClick: () => {
-          const playerPosition = Player.getPosition()
+          const playerPosition = Player.getPosition();
 
-          this.data.waypointData.coords.x = playerPosition.x
-          this.data.waypointData.coords.y = playerPosition.y
-          this.data.waypointData.coords.z = playerPosition.z
+          this.data.waypointData.coords.x = playerPosition.x;
+          this.data.waypointData.coords.y = playerPosition.y;
+          this.data.waypointData.coords.z = playerPosition.z;
 
-          alert("Position updated to current")
+          alert("Position updated to current");
         }
       }},
       editButton: { type: "button", bitmap: "button_borderless_light", bitmap2: "button_borderless_lightpressed", scale: 14, x: 80, y: this.offset + 580, clicker: {
