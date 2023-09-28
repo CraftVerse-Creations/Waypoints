@@ -4,3 +4,5 @@ utils.ts
 
 core/main.ts
 core/Gui.ts
+
+shared.ts
