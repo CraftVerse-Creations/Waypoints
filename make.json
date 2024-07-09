@@ -40,5 +40,10 @@
 			"language": "javascript"
 		}
 	],
-	"additional": []
+	"additional": [
+		{
+            "source": "config.json",
+            "targetDir": "."
+        }
+	]
 }
